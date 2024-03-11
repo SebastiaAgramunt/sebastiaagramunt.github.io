@@ -7,9 +7,13 @@
   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
   url:  'https://www.linkedin.com/in/agramuntpuig'  # Fill with your Linkedin homepage
 
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
-  url: "https://twitter.com/agramuntpuig"
+# - type: twitter
+#   icon: "fa-brands fa-x-twitter"
+#   url: "https://twitter.com/agramuntpuig"
+
+- type: orcid
+  icon: "fa-brands fa-orcid"
+  url: "https://orcid.org/0000-0002-3627-2820"
 
 - type: email
   icon: "fas fa-envelope"
