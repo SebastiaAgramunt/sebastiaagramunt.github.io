@@ -8,6 +8,7 @@ Hi there, I'm Sebastià Agramunt Puig a software developer based in the Bay Area
 
 My interests are wide but there are always two common denominators, software development and mathematics. I currently work at <a href="https://www.eikontx.com/" target="_blank">Eikon Therapeutics</a> as a Senior Software Developer.
 
+
 # The blog
 
 Over the years I've been keeping notes about topics I like to learn and have been useful in my professional life. The idea for this blog is to keep a log for myself as well as share with other people that may have similar interests to mine. Please, reach out if you have questions about the contend or find errors in the posts. 

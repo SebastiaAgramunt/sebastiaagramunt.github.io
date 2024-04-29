@@ -4,6 +4,12 @@ icon: fas fa-cube
 order: 2
 ---
 
-## Criptography
+## Cryptography
 
 - <a href="../posts/prime-numbers">Prime Numbers</a>
+
+
+## Python Development Setup
+
+- <a href="../posts/install-python">Install Python</a>
+- <a href="../posts/install-python-brew">Install Python using HomeBrew</a>
