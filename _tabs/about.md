@@ -19,7 +19,7 @@ Download the <a href="../files/2024.05.10_Sebastia_Agramunt_CV.pdf" download>det
 
 # Contact
 
-**Email**: [contact[@]agramunt[dot]me](mailto:?subject=Test) 
+**Email**: [contact[@]agramunt[dot]me](mailto:contact[@]agramunt[dot]me) 
 
 If possible, send me your email encrypted with PGP:
 
