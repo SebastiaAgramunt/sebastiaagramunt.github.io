@@ -85,8 +85,8 @@ social_preview_image: # string, local or CORS resources
 # boolean type, the global switch for TOC in posts.
 toc: true
 
-plugins:
-  - jekyll-redirect-from
+# plugins:
+#   - jekyll-redirect-from
 
 comments:
   active: # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
