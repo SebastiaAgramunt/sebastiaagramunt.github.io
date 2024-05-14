@@ -35,7 +35,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Sebastia Agramunt Puig
-  email: contact[-at-]agramunt.me # change to your email address
+  email: contact [@] agramunt [dot] me # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/agramuntpuig # change to your twitter homepage
@@ -84,6 +84,9 @@ social_preview_image: # string, local or CORS resources
 
 # boolean type, the global switch for TOC in posts.
 toc: true
+
+plugins:
+  - jekyll-redirect-from
 
 comments:
   active: # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable

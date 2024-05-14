@@ -13,3 +13,4 @@ order: 2
 
 - <a href="../posts/install-python">Install Python</a>
 - <a href="../posts/install-python-brew">Install Python using HomeBrew</a>
+- <a href="../posts/install-python-source">Install Python from source</a>

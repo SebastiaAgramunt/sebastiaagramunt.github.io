@@ -14,9 +14,16 @@ math: true
 
 ## MacOS
 
+### TLDR
+
+Download and install homebrew and install python
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install python
+python3
+```
+
 ### Prerequisites
-
-
 
 On MacOS Brew installs the software in `/usr/local/Cellar/` and creates symlinks to the binaries in `/usr/local/opt/` and `/usr/local/bin/`. 
 
