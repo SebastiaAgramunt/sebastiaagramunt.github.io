@@ -16,3 +16,4 @@ order: 2
 - <a href="../posts/install-python-source">Install Python from source</a>
 - <a href="../posts/conda">Install conda</a>
 - <a href="../posts/pyenv">Python version management with Pyenv</a>
+- <a href="../posts/python-virtual-environments">Python virtual environments</a>
