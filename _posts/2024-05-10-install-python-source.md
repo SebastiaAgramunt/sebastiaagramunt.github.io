@@ -14,6 +14,8 @@ In the previous posts of this series we have used installers that are platform s
 
 ## TLDR
 
+Install python version in specific directory ` ~/.python/`
+
 ```bash
 # select version and create directory structure
 export PYTHON_VERSION=3.12.3
@@ -36,7 +38,6 @@ make install
 rm -rf ~/.python/${TEMPDIR}
 
 # now you can run python
-cd $HOME
 ~/.python/${PYTHON_VERSION}/bin/python3
 
 # make the binary available by exporting to PATH

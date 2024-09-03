@@ -1,5 +1,5 @@
 ---
-title: Virtual Environments in Python
+title: Python Virtual Environments with Venv
 author: sebastia
 date: 2024-08-04 21:05:00 +0800
 categories: [Python]
@@ -12,10 +12,12 @@ math: true
 
 We have seen so far how to get different python versions in your system and briefly how to install packages using `pip install`. In real projects you want to take control over both, python version as well as packages versions and also having a fixed combination of these per project. 
 
-Virtual environments allows you to create a completely separated environment combining a python version with a set of packages in a specific version. In this post we will show how to create a virtual environment in different ways.
+Virtual environments allows you to create a completely separated environment combining a python version with a set of packages in a specific version. In this post we will show how to create a virtual environment using `venv`, the default virtual environment manager in Python. As the first post in virtual environments we will also dive a bit deeper on the directories that are created and good practices on maintaining virtual environments.
 
 
 ## TLDR
+
+To create a virtual environment using `venv` command line:
 
 Save the following `create_environment.sh` in the place where you want to create the virtual environment changing the python version
 
@@ -80,9 +82,13 @@ pip install pandas
 pip install matplotlib
 ```
 
-## Create a virtual environment with Venv module
+## Install venv
 
-Python has a default module to create virtual environments called [venv](https://docs.python.org/3/library/venv.html), the syntax is very simple, `python -m venv path/to/your/new/venv`. First select or install the python version with which you want to create the virtual environment, I normally use `pyenv` (see the <a href="../pyenv">pyenv post</a> for further reference) to do this, let's install `3.12.4` as an example
+It comes by default with `python`. Call it via `python -m venv --help`.
+
+## Create a virtual environemnt
+
+The venv [venv](https://docs.python.org/3/library/venv.html) module can be invoked to create a virtual environment. The syntax is very simple, `python -m venv path/to/your/new/venv`. First select or install the python version with which you want to create the virtual environment, I normally use `pyenv` (see the <a href="../pyenv">pyenv post</a> for further reference) to do this, let's install `3.12.4` as an example
 
 
 ```bash
@@ -168,7 +174,7 @@ which will install a new virtual enviroment in the directory where the script is
 > TIP: Sometimes there's no need to create a new repository per project. For instance, if you are a data scientist crunching some numbers here and there you may want to use the same virtual environment without paying too much attention to what is the python or package versions. For those cases create virtual environments in your home directory like `mkdir ~/.venvs && python -m venv ~/.venvs/data_science`, and activate with `source ~/.venvs/data_science/bin/activate`.
 {: .prompt-tip }
 
-# Install and pin dependencies on a virtual environment
+# Install and pin dependencies on a virtual environment with pip
 
 Once created a virtual environment, the most common is to install your dependencies. No matter what you do in python, it's 99% probable that you need an external package. In command line you can just `pip install package` whatever dependency specifying the version so that another developer can reproduce your code with exactly the same results. The same could be applied for services (e.g. REST APIs) for which need to be shut down, deleted and rebuilt and started. For this reason we must pin dependencies for reproducible outcomes, we do that with a file called `requirements.txt`. 
 
@@ -186,15 +192,21 @@ pip will interpret at this point which is the most suitable version for each of 
 .venv/bin/python -m pip freeze
 ```
 
-In my case, I see `numpy==1.21.6`, `pandas==1.3.5` and `matplotlib==3.5.3` and a bunch of other packages. Two things to note here, first, the `==` means that it uses that specific version on fhe package and no other. The second why are there other packages if we just installed three?. Turns out these three packages use other packages at the same time and those have to be pinned too!. You can see the whole depencency with a package I recently found (and I love) called `pipdeptree`:
+In my case, I see `numpy==1.21.6`, `pandas==1.3.5` and `matplotlib==3.5.3` and a bunch of other packages. Two things to note here, first, the `==` means that it uses that specific version on fhe package and no other. The second why are there other packages if we just installed three?. Turns out these three packages use other packages at the same time and those have to be pinned too!. You can see the whole depencency with two packages I recently found called `pipdeptree` and `pip-tree`, both are great, check them out.
 
 
 ```bash
 # install pipdeptree
 .venv/bin/python -m pip install pipdeptree
 
+# install pip-tree
+# .venv/bin/python -m pip install pip-tree
+
 # run pipdeptree
 .venv/bin/pipdeptree
+
+# or run pip-tree
+# .venv/bin/pip-tree
 ```
 
 which gives the following:
