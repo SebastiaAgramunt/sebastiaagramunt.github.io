@@ -19,3 +19,5 @@ order: 2
 - <a href="../posts/python-virtual-environments-with-venv">Python virtual environments with venv</a>
 - <a href="../posts/python-virtual-environments-with-virtualenv">Python virtual environments with virtualenv</a>
 - <a href="../posts/python-virtual-environments-with-pipenv">Python virtual environments with pipenv</a>
+- <a href="../posts/python-virtual-environments-with-uv">Python virtual environments with uv </a>
+- <a href="../posts/python-project">Setup a python project</a>
