@@ -217,7 +217,7 @@ Finally you can even pin the dependencies using
 ```bash
 uv lock
 ```
-that will generate a file `uv.lock` that contains the package version along with the hash and the specific wheel to download from pypi on every platform, similarly to what we have seen in [pipvenv](./2024-08-31-python-virtual-environments-with-pipenv.md) in file `Pipfile.lock`. As mentioned several times in these series of posts, one may want to use a locked environment when running a service and not when defining a package.
+that will generate a file `uv.lock` that contains the package version along with the hash and the specific wheel to download from pypi on every platform, similarly to what we have seen in pipvenv post in file `Pipfile.lock`. As mentioned several times in these series of posts, one may want to use a locked environment when running a service and not when defining a package.
 
 In some ocasions you may want to build and publish the python package, for that uv has the commands `build` and `publish`. We won't get into the details of it in this post (we'll have a later post dedicated to it), just remember that you can handle this with `uv`.
 
