@@ -30,6 +30,10 @@ uv pip install numpy pandas
 
 # see the list of packages and versions
 uv pip list
+
+# install from pyproject.com
+uv venv .venv
+uv sync
 ```
 
 General steps to create a package (assuming we have python 3.13)
@@ -238,7 +242,7 @@ time uv pip install pandas scikit-learn flask fastapi matplotlib requests pytest
 with result:
 
 ```
- 2.90s user 8.10s system 128% cpu 8.555 total
+ 3.61s user 8.63s system 61% cpu 19.781 total
 ```
 
 
@@ -257,10 +261,10 @@ time pip install pandas scikit-learn flask fastapi matplotlib requests pytest bo
 with result:
 
 ```
-32.84s user 6.27s system 77% cpu 50.639 total
+31.42s user 7.10s system 63% cpu 1:00.27 total
 ```
 
-### conda
+### Conda
 
 Run
 
@@ -291,11 +295,29 @@ dependencies:
 ```
 
 ```bash
-conda clean --all
+conda clean --all -y
 time conda env create -f environment.yml
 ```
 
-getting a time of 45 seconds.
+getting a time of 43 seconds.
+
+### Mamba
+
+Run
+
+```bash
+pyenv shell mambaforge
+conda remove --name myenv --all -y
+```
+
+create same file `environment.yml` as the `conda` section. 
+
+```bash
+conda clean --all -y
+time conda env create -f environment.yml
+```
+
+geting a time of 52 seconds.
 
 ### Poetry
 
@@ -352,9 +374,10 @@ Summing up, `uv` seems to be the fastest by far. Very promissing
 
 | tool   | time to resolve depencencies(seconds) |
 |--------|---------------------------------------|
-| uv     | 4.479                                 |
-| pip    | 50.63                                 |
-| conda  | 45                                    |
+| uv     | 19.78                                 |
+| pip    | 60.27                                 |
+| conda  | 43                                    |
+| mamba  | 52                                    |
 | poetry | 39.87                                 |
 
 
