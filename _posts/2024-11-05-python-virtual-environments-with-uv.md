@@ -225,6 +225,116 @@ that will generate a file `uv.lock` that contains the package version along with
 
 In some ocasions you may want to build and publish the python package, for that uv has the commands `build` and `publish`. We won't get into the details of it in this post (we'll have a later post dedicated to it), just remember that you can handle this with `uv`.
 
+## A more complete `pyproject.toml` and how to install in `uv` and `pip`
+
+In this section we'll show a better `pyproject.toml` and how to install it using `pip` and `uv`. One of the good things about `uv` is that it seems to be completely compatible with `pip`, the default dependency manager. That makes it ideal for any project as regular users won't use `uv`.
+
+```
+[project]
+name = "newpackage"
+version = "0.1.0"
+description = "My new package"
+authors = [
+    { name = "the author" }
+]
+license = { text = "MIT license" }
+readme = "README.md"
+
+requires-python = ">=3.9,<3.13"
+dependencies = [
+    "matplotlib>=3.9",
+    "numpy>=1.26,<2.0.0",
+    "pandas>=2.2",
+    "scipy>=1.13",
+    "tifffile>=2024.8",
+    "pip>=24.3.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "coverage>=7.6",
+    "pytest>=8.3",
+    "ruff>=0.7",
+]
+
+# Ruff is a great tool for linting
+[tool.ruff]
+line-length = 99
+
+[tool.ruff.lint]
+select = [
+    # Pyflakes
+    "F",
+    # Pycodestyle & Warnings
+    "E",
+    "W",
+    # isort for unsorted imports
+    "I001"
+]
+
+
+# build system, use setuptools, the default for Python
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+# python CLI, structure scripts/my_script.py funcion main
+# once installed the environment, activate it and run `my_cli` on terminal
+# to run the CLI
+[project.scripts]
+my_cli = "scripts.my_script:main"
+
+## In case you run a private pypi repository, uncomment and change URL
+# [[tool.uv.index]]
+# name="pypi-internal-server"
+# url = "http://pypi-server.mydomain.com:8081/repository/"
+# priority = "supplemental"
+```
+
+To install, create the enviornment and sync
+
+```bash
+uv venv .venv
+uv sync
+
+# to install with the optional dependencies
+uv sync --all-extras
+```
+
+Equivalently in pip you can do
+
+```bash
+python -m venv .venv
+.venv/bin/python -m pip install --upgrade pip
+.venv/bin/python -m pip install . --extra-index-url http://pypi-server.mydomain.com:8081/repository/
+
+# to install with optional dependencies
+.venv/bin/python -m pip install .[dev] --extra-index-url http://pypi-server.mydomain.com:8081/repository/
+```
+
+Now, there's a lot here, let me explain, the first part just specifies the python versions and the dependencies. Then we have the tool `ruff`, more on that later, the build system (`setuptools` as the default tool in python) and finally a CLI and an internal pypi repository. 
+
+Let me begin by `ruff` tells you what lines of your code are not properly formatted (linting) and also formats them (changes the format of the code, a formater). Run it with `uv run ruff check .`. It will complain with a source code like
+
+```python
+import os
+import sys  # Unused import
+
+def example_function(x, y):
+    return x + y
+
+
+def unused_function(a, b):  # Unused function
+    return a * b
+
+
+print(example_function(1, 2))  
+```
+
+Second line will raise error `F401`, the unused function will raise `F841` and finally if any line would exceed 99 characters it would raise `E501`. Ruff is good to keep you code clean.
+
+The private repository is a URL where we can host wheels, the software artifacts containing a package (most of the times is basically a zipped repository). In some organizations we publish packages in an internal repository but by default python tries to find all packages in [pypi](https://pypi.org/). Adding the final lines with the appropiate URL will tell `uv` that it may have to look at that repository too. We have defined this for `uv` only in the `pyproject.toml`, actually it is not possible to define it for `pip`. In that case we simply add the extra index at the time of installation through `--extra-index-url http://pypi-server.mydomain.com:8081/repository/`. An alternative for `pip` is to add a `pip.conf` file (see more details [here](https://pip.pypa.io/en/stable/topics/configuration/)).
+
 ## Speed benchmark 
 
 In this section we will test how fast each engine is capable of resonving basic dependencies and time it!. In an empty directory execute:
