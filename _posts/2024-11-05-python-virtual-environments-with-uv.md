@@ -1,7 +1,7 @@
 ---
 title: UV python package and project manager
 author: sebastia
-date: 2024-11-05 6:15:00 +0800
+date: 2024-11-24 6:15:00 +0800
 categories: [Python]
 tags: [computer science]
 pin: true
@@ -302,7 +302,7 @@ To install, create the enviornment and sync
 uv venv .venv
 uv sync
 
-# to install with the optional dependencies
+# to install with the optional dependencies (dev in our case)
 uv sync --all-extras
 ```
 
