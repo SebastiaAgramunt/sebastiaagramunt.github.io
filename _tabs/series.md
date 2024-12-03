@@ -22,3 +22,9 @@ order: 2
 - <a href="../posts/python-virtual-environments-with-poetry">Python virtual environments with poetry </a>
 - <a href="../posts/python-virtual-environments-with-uv">Python virtual environments with uv </a>
 - <a href="../posts/python-project">Setup a python project</a>
+
+
+## Raspberry
+
+- <a href="../posts/raspberry-intro">Initial Raspberry Pi configuration</a>
+<!-- - <a href="../posts/raspberry-remote-ssh">Raspberry remote SSH access</a> -->
