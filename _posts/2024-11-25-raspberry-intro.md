@@ -103,7 +103,7 @@ ssh raspberry_local
 
 And install `vim`
 
-``bash
+```bash
 sudo apt-get install vim
 ```
 
