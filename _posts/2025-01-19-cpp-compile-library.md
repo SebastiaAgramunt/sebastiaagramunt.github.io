@@ -10,7 +10,7 @@ render_with_liquid: false
 math: true
 ---
 
-n C++ we constantly deal with libraries that are compiled in our system like the standard libraries or other libraries such as  [OpenCV](https://opencv.org/) (for computer vision) [Boost](https://www.boost.org/) (for linear algebra, pseudorandom number generation...). In this post we will learn about shared and static libraries, how to compile them and how to link them to your programs.
+In C++ we constantly deal with libraries that are compiled in our system like the standard libraries or other libraries such as  [OpenCV](https://opencv.org/) (for computer vision) [Boost](https://www.boost.org/) (for linear algebra, pseudorandom number generation...). In this post we will learn about shared and static libraries, how to compile them and how to link them to your programs.
 
 All the code in this post can be found in (cpp-compile-library)[https://agramunt.me/posts/cpp-compile-library/] supporting material of my [blogging-code](https://github.com/SebastiaAgramunt/blogging-code) github repository.
 
