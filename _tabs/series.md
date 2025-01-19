@@ -28,3 +28,7 @@ order: 2
 
 - <a href="../posts/raspberry-intro">Initial Raspberry Pi configuration</a>
 <!-- - <a href="../posts/raspberry-remote-ssh">Raspberry remote SSH access</a> -->
+
+## C++
+
+- <a href="../posts/cpp-basics">C++ basics</a>
