@@ -12,6 +12,8 @@ math: true
 
 As mentioned in other posts C++ is a rich programming language that has been out there for a while, it's predecessor C was created in the 70s and C++ in 1979. Naturally many projects flourished using this language and therefore we have lots of resources out there to use, among them [OpenCV](https://opencv.org/), [Boost](https://www.boost.org/), [Eigen](https://eigen.tuxfamily.org/index.php?title=Main_Page) or [cBLAS](https://www.gnu.org/software/gsl/doc/html/cblas.html). In this post we will see an example on how to compile link and use OpenCV in a custom C++ program.
 
+The code to generate the following can be found in the repository [blogging-code](https://github.com/SebastiaAgramunt/blogging-code) in the subdirectory [cpp-compile-link-external-lib](https://github.com/SebastiaAgramunt/blogging-code/tree/main/cpp-compile-link-external-lib).
+
 
 ## File structure
 
