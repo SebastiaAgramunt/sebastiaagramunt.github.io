@@ -32,3 +32,5 @@ order: 2
 ## C++
 
 - <a href="../posts/cpp-basics">C++ basics</a>
+- <a href="../posts/cpp-multifile-project">C++ Multiple file project</a>
+- <a href="../posts/cpp-compile-library">C++ Compile libraries</a>
