@@ -11,7 +11,7 @@ math: true
 ---
 
 
-Normally when dealing with C++ projects, developers structure their code in source files and headers. Here I want to show how to create a simple project without external dependencies.
+Normally when dealing with C++ projects, developers structure their code in source files and headers. Here I want to show how to create a simple project without external dependencies. The entire example can be found in my github repository [blogging-code](https://github.com/SebastiaAgramunt/blogging-code).
 
 ## File structure
 
