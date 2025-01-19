@@ -34,3 +34,4 @@ order: 2
 - <a href="../posts/cpp-basics">C++ basics</a>
 - <a href="../posts/cpp-multifile-project">C++ Multiple file project</a>
 - <a href="../posts/cpp-compile-library">C++ Compile libraries</a>
+- <a href="../posts/cpp-compile-link-external-lib">C++ Compile and link external libraries</a>
