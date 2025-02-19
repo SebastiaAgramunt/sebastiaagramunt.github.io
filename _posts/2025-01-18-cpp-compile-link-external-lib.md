@@ -1,7 +1,7 @@
 ---
 title: C++ compile and link external library
 author: sebastia
-date: 2025-01-19 7:05:00 +0800
+date: 2025-01-19 9:05:00 +0800
 categories: [C++]
 tags: [computer science]
 pin: true

@@ -35,3 +35,9 @@ order: 2
 - <a href="../posts/cpp-multifile-project">C++ Multiple file project</a>
 - <a href="../posts/cpp-compile-library">C++ Compile libraries</a>
 - <a href="../posts/cpp-compile-link-external-lib">C++ Compile and link external libraries</a>
+- <a href="../posts/cpp-make">Make and Makefiles</a>
+
+## Algorithms and Data Structures
+
+- <a href="../posts/introduction-to-graphs">Introduction to Graphs</a>
+- <a href="../posts/depth-first-search">Graphs - Depth First Search</a>

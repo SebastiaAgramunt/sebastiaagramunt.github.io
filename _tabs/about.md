@@ -11,7 +11,7 @@ My interests are wide but there are always two common denominators, software dev
 
 # The blog
 
-Over the years I've been keeping notes about topics I like to learn and have been useful in my professional life. The idea for this blog is to keep a log for myself as well as share with other people that may have similar interests to mine. Please, reach out if you have questions about the contend or find errors in the posts. 
+Over the years I've been keeping notes about topics I like to learn and have been useful in my professional life. The idea for this blog is to keep a log for myself as well as share with other people that may have similar interests to mine. Please, reach out if you have questions about the content or find errors in the posts. 
 
 # CV
 

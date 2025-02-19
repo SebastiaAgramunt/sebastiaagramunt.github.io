@@ -113,7 +113,7 @@ g++ -std=c++17 -Iinclude -c src/module2/module2c2.cpp -o build/obj/moudle2c2.o
 g++ -std=c++17 -Iinclude -c src/main.cpp -o build/obj/main.o
 ```
 
-We are choosing the C++ standard with the flag `-std` (check the versions in [cpprefenence.com](https://en.cppreference.com/w/cpp)). The include directory is "included" with the flag `-I` and according to the project structure is `include`. Finally the flag `-c` is to tell the compiler to compile the source into an object file.
+We are choosing the C++ standard with the flag `-std` (check the versions in [cpprefenence.com](https://en.cppreference.com/w/cpp)). The include directory is "included" with the flag `-I` and according to the project structure is `include`. Finally the flag `-c` is to tell the compiler to compile the source into an object file. For faster compilation use additional flags like `-O3` (aggressive optimization, you can do `O2` or `O1` for less optimization),  `-march=native` (optimizing for your specific CPU), `-flto` (link time optimization for cross file optimizations) and  `-ffast-math` (aggresive floating point optimizations).
 
 After the sources have been compiled and we checked that there is no error the next step is to link the objects. The linker will check all the definitions of the objects and generate a `main` executable that when run will start with the `int main()` function. The function `main()` could be in any of the object files but the important is that when liking several objects there should be only one `main` function to generate an executable. Let's link all the objects with the command
 
