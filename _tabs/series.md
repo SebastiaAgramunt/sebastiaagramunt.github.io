@@ -7,7 +7,7 @@ order: 2
 ## Cryptography
 
 - <a href="../posts/prime-numbers">Prime Numbers</a>
-
+- <a href="../posts/number-theory">Number Theory</a>
 
 ## Python Development Setup
 
@@ -41,3 +41,4 @@ order: 2
 
 - <a href="../posts/introduction-to-graphs">Introduction to Graphs</a>
 - <a href="../posts/depth-first-search">Graphs - Depth First Search</a>
+
