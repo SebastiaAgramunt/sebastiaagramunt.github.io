@@ -65,14 +65,14 @@ The summary of the steps for the depth first search of this graph is
 
 | **Step** | **Current Node** | **Stack (before update)** | **Visited Nodes**          | **Stack (after update)** |
 |---------|---------------|----------------------|---------------------------|--------------------------------|
-| 0       | A             | []                   | [A]                       | [B, C, D]                     |
-| 1       | B             | [C, D]               | [A, B]                    | [A, H, E, D, C, D]            |
-| 2       | H             | [E, D, C, D]         | [A, B, H]                 | [B, E, D, C, D]               |
-| 3       | E             | [D, C, D]            | [A, B, H, E]              | [B, F, D, C, D]               |
-| 4       | F             | [D, C, D]            | [A, B, H, E, F]           | [C, D, E, G, D, C, D]         |
-| 5       | C             | [D, E, G, D, C, D]   | [A, B, H, E, F, C]        | [A, F, D, E, G, D, C, D]      |
-| 6       | D             | [E, G, D, C, D]      | [A, B, H, E, F, C, D]     | [B, A, F, E, G, D, C, D]      |
-| 7       | G             | [D, C, D]            | [A, B, H, E, F, C, D, G]  | [F, D, C, D]                  |
+| 0       | A             | []                   | [A]                       | [D, C, B]                     |
+| 1       | B             | [D, C]               | [A, B]                    | [D, C, D, E, H, A]            |
+| 2       | H             | [D, C, D, E]         | [A, B, H]                 | [D, C, D, E, B]               |
+| 3       | E             | [D, C, D]            | [A, B, H, E]              | [D, C, D, F, B]               |
+| 4       | F             | [D, C, D]            | [A, B, H, E, F]           | [D, C, D, G, E, D, C]         |
+| 5       | C             | [D, C, D, G, E, D]   | [A, B, H, E, F, C]        | [D, C, D, G, E, D, F, A]      |
+| 6       | D             | [D, C, D, G, E]      | [A, B, H, E, F, C, D]     | [D, C, D, G, E, F, A, B]      |
+| 7       | G             | [D, C, D]            | [A, B, H, E, F, C, D, G]  | [D, C, D, F]                  |
 
 
 
