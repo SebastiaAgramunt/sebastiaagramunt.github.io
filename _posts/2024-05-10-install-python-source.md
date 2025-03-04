@@ -14,7 +14,7 @@ In the previous posts of this series we have used installers that are platform s
 
 ## TLDR
 
-Install python version in specific directory ` ~/.python/`
+Install python version in specific directory `~/.python/`
 
 ```bash
 # select version and create directory structure

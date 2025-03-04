@@ -86,6 +86,8 @@ Let's look at some of the first steps:
 
 The order of the visited nodes is [$A$, $B$, $H$, $E$, $F$, $C$, $D$, $G$]. Notice why we stop at step 7 even though we still have nodes in the stack. In the potential new step we search for the stack and all nodes have been visited so we have finished trasversing the graph.
 
+The structure of a depth fist search relies on a FILO (First In Last Out) queue. This can be implemented in a stack data structure. In python is simply a list that appends new elements and pops elements to be visited. The pop operation in a list is just getting the last element.
+
 This algorithm can be coded in python
 
 ```python

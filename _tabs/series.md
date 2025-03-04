@@ -22,6 +22,7 @@ order: 2
 - <a href="../posts/python-virtual-environments-with-poetry">Python virtual environments with poetry </a>
 - <a href="../posts/python-virtual-environments-with-uv">Python virtual environments with uv </a>
 - <a href="../posts/python-project">Setup a python project</a>
+- <a href="../posts/python-docker">Dockerfiles with Python</a>
 
 
 ## Raspberry
@@ -41,4 +42,4 @@ order: 2
 
 - <a href="../posts/introduction-to-graphs">Introduction to Graphs</a>
 - <a href="../posts/depth-first-search">Graphs - Depth First Search</a>
-
+- <a href="../posts/breadth-first-search">Graphs - Breadh First Search</a>
