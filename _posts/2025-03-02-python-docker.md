@@ -222,7 +222,7 @@ USER ${USERNAME}
 CMD ["/bin/bash"]
 ```
 
-## Docker image with UV
+### Docker image with UV
 
 Following the previous pattern you may not be surprised about this one
 
