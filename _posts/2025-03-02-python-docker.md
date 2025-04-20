@@ -33,7 +33,7 @@ brew install colima
 Start colima as the engine for docker
 
 ```bash
-brew start colima
+colima start
 ```
 
 When you no longer need your containers running make sure to do `brew stop colima`. 
