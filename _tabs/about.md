@@ -15,7 +15,7 @@ Over the years I've been keeping notes about topics I like to learn and have bee
 
 # CV
 
-Download the <a href="../files/2025.05.11_Sebastia_Agramunt_CV.pdf" download>detailed CV</a>
+Download the <a href="../files/2025.05.17_Sebastia_Agramunt_CV.pdf" download>detailed CV</a>
 
 # Contact
 
