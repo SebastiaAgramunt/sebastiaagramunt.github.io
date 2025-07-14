@@ -40,6 +40,10 @@ order: 2
 - <a href="../posts/cpp-make">Make and Makefiles</a>
 - <a href="../posts/cpp-python-extension">C++ basic Python extension</a>
 
+## CUDA
+
+- <a href="../posts/cuda-utils">CUDA Utils</a>
+
 ## Algorithms and Data Structures
 
 - <a href="../posts/introduction-to-graphs">Introduction to Graphs</a>
