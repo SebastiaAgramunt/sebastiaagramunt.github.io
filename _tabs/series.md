@@ -10,12 +10,12 @@ order: 2
 - <a href="../posts/number-theory">Number Theory</a>
 - <a href="../posts/introduction-to-secure-communication">Introduction to Secure Communication</a>
 
-## Python Development Setup
+## Python
 
 - <a href="../posts/install-python">Install Python</a>
 - <a href="../posts/install-python-brew">Install Python using HomeBrew</a>
 - <a href="../posts/install-python-source">Install Python from source</a>
-- <a href="../posts/conda">Install conda</a>
+- <a href="../posts/conda">Conda Package Manager</a>
 - <a href="../posts/pyenv">Python version management with Pyenv</a>
 - <a href="../posts/python-virtual-environments-with-venv">Python virtual environments with venv</a>
 - <a href="../posts/python-virtual-environments-with-virtualenv">Python virtual environments with virtualenv</a>
@@ -49,3 +49,7 @@ order: 2
 - <a href="../posts/introduction-to-graphs">Introduction to Graphs</a>
 - <a href="../posts/depth-first-search">Graphs - Depth First Search</a>
 - <a href="../posts/breadth-first-search">Graphs - Breadh First Search</a>
+
+## Tools
+
+- <a href="../posts/veracrypt">Veracrypt</a>
