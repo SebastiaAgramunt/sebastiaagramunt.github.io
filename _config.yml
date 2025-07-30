@@ -15,6 +15,7 @@ timezone: America/Los_Angeles
 # ↓ --------------------------
 
 title: Sebastia Agramunt Puig - Blog # the main title
+author: Sebastia Agramunt Puig
 
 tagline: A blog about software engineering, maths, physics and cryptography  # it will display as the sub-title
 
@@ -196,6 +197,12 @@ exclude:
   - LICENSE
   - rollup.config.js
   - package*.json
+
+plugins:
+  - jekyll-feed
+
+feed:
+  posts_limit: 50
 
 jekyll-archives:
   enabled: [categories, tags]
