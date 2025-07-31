@@ -97,18 +97,3 @@ python3
 # same as before but specifying the version we just installed.
 python3.12
 ```
-
-<!-- 
-## Install another version
-
-Say we want to install python `3.8`, we will do:
-
-```bash
-brew install python@3.8
-```
-
-And check that is there:
-
-```bash
-ls -lhat /usr/local/Cellar | grep python
- -->

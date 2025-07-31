@@ -12,25 +12,6 @@ math: true
 
 Python is a very popular scripting language, according to [StackOverflow 2023 survey](https://survey.stackoverflow.co/2023/) it is the third most commonly used language and the fourth in the ranking for professional developers. All in all, it is a very simple language to learn and thus is one of the first languages new developers incorporate in their projects. In this post we will see how to install Python in your system.
 
-<!-- 
-## Why Python?
-
-Python is 
-
-* Easy to learn: Python's simple and readable syntax makes it easy to learn for beginners.
-* Easy to use: Python's minimalist approach allows developers to focus on problem-solving rather than complex syntax.
-* Extensive standard library: Python's standard library provides a wide range of modules and packages that can be readily used in projects, reducing development time.
-* Extensive open source library: The comunity has built and maintained projects for web, backend, scientific computing, data science, computer science... so that you don't need to build yourself.
-* Large comunity and suport: Many users mean there is probably someone else with the same coding problem you are facing.
-* Integration with other languages: Python can be easily integrated with other languages like C++ for better performance.
-* Cross platform: Easy to run and deploy in different operating systems and computer architectures.
-
-The huge standard library and packages and the ease for fast prototiping makes Python a great programming language in many jobs, specially for data sicence and machine learning. However, Python is not the best for every kind of task you may encounter in your programming job, the main cons are:
-
-* Performance: It can be very slow compared to compiled languages like C++, as much as 10X slower.
-* Higher memory consumption compared to other languages like C++ or Go
-* Runtime Errors: Since python is interpreted, the only errors we will get are at runtime. In compiled languages we can catch many errors at compile-link time. -->
-
 ## TLDR
 
 Tutorial to install python from installable in MacOS. 
@@ -71,11 +52,6 @@ That's it, you have successfully installed Python!.
 
 In MacOS python is installed in `/Library/Frameworks/Python.framework/Versions/3.12/` (for Windows it would be `C:\Users\<Username>\AppData\Local\Programs\Python\Python3.12`). If you installed any other python version, say `3.11.2`, just change the path to the corresponding major and minor versions. Let's explore what is in there, the main directories are:
 
-<!-- * `bin` : Where the binaries (executables) are stored, this is python and pip among others.
-* `include/python3.12`: All header files for the compiled libraries. For instance, the file `floatobject.h ` contains the C++ definition of the float object in Python. The headers in this directory are needed if we want to compile a C++ extension to be used in Python (a Python wrapper for a C++ library).
-* `lib`: contains compiled libraries. Concretely it contains `libpython3.12.a` or `libpython3.12.so` wich is the (static or dynamic) compiled standard library for python. This directory is added automatically to `sys.path` . Also custom compiled packages are copied here.
-* `share`: Includes miscellaneous files such as documentation, configuration files, and examples. It might also contain man pages, sample scripts, and other shared assets that don’t fit into the binary, header, or library categories.
- -->
 
 | Directory          | Usage                                                                                                                                                                                                                                                                                     |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -165,80 +141,3 @@ reset
 ```
 
 You are all set. Python is deleted from your system
-
-
-<!-- 
-
-## Install Python from source
-
-There is the possibility of installing Python in a custom directory. Let's say we wish to have several python versions in the directory `~/.python_versions`, let's install Python `3.12.3` there:
-
-```bash
-
-# set a convenient variable for the version
-PYTHON_VERSION=3.12.3
-
-# create an installation directory
-mkdir -p ~/.python_versions/${PYTHON_VERSION}
-
-# download python tar.gz file
-wget https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz
-
-# untar and drive to the new directory
-tar -xzf Python-${PYTHON_VERSION}.tgz
-cd Python-${PYTHON_VERSION}
-
-# configure to install in the desired directory
-./configure --prefix=${HOME}/.python_versions/${PYTHON_VERSION} --enable-optimizations
-
-# compile the code in 8 parallel processes (to run faster)
-make -j8
-
-# install
-sudo make altinstall
-```
-
-Now you got python installed at the specified directory. To open a prompt just run:
-
-```bash
-~/.python_versions/3.12.3/bin/python3.12
-```
-
-Unfortunatelly the directory `~/.python_versions/3.12.3/bin/` is not in the `PATH` we can create a symlink for the exec
-
-```bash
-ln -s ${HOME}/.python_versions/3.12.3/bin/python3.12 /usr/local/bin/python3.12
-```
-
-Then, whenever you type `python3.12` on your terminal, it will direct you to that python installation. -->
-<!-- 
-## Versions
-
-As you can imagine Python evolves over time and there are things that change, for instance in Python 3.8 it was introduced the walrus operator (`:=`), prior versions of python do not have this operaror so if you write a program having a single line with the walrus operator and use  aversion of python `<3.8` the program will fail at execution time. To keep track of all changes in python you can refer to the [Python Enhancement Program (a.k.a PEP)](https://peps.python.org/).
-
-Different projects need for different python versions so in the same system we may want to have Python `3.12`, `3.11`, `3.7`... Can we have all these at the same time in the system?. Yes, just install new versions following the instructions on the previous section changing the version `PYTHON_VERSION` to the desired one. However this is cumbersome and not easy to maintain. In a following post I will show how to manage python versions using [pyenv](https://github.com/pyenv/pyenv).
-
-## Structure of installation
-
-Python is not only an executable, let's inspect the directories of the installation. If we take the custom installation the directory we created would be `${HOME}/.python_versions/3.12.3/`:
-
-```bash
-tree ${HOME}/.python_versions/3.12.3/ -L 1
-```
-We see four directories:  -->
-
-
-<!-- 
-
-
-to print "Hi There" in terminal. If you want to use `python` instead of `python3`, just create an alias. 
-
-```bash
-# if your shell is zsh
-echo "alias python='python3'" >> ~/.zshrc
-source ~/.zshrc
-
-# if your shell is bash
-echo "alias python='python3'" >> ~/.bashrc
-source ~/.bashrc
-``` -->
