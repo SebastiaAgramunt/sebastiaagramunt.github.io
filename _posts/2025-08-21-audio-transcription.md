@@ -1,5 +1,5 @@
 ---
-title: Audio Transcription
+title: Audio Transcription using Whisper from OpenAI
 author: sebastia
 date: 2025-08-21 17:22:00 +0800
 categories: [Misc]
