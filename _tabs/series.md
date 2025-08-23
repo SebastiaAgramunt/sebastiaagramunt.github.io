@@ -42,6 +42,7 @@ order: 2
 ## CUDA
 
 - <a href="../posts/cuda-utils">CUDA Utils</a>
+- <a href="../posts/audio-transcription">Audio Transcription</a>
 
 ## Algorithms and Data Structures
 
