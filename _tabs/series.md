@@ -38,6 +38,7 @@ order: 2
 - <a href="../posts/cpp-compile-link-external-lib">C++ Compile and link external libraries</a>
 - <a href="../posts/cpp-make">Make and Makefiles</a>
 - <a href="../posts/cpp-python-extension">C++ basic Python extension</a>
+- <a href="../posts/blas-lapack-install">BLAS and LAPACK install</a>
 
 ## CUDA
 
