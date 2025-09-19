@@ -33,6 +33,7 @@ brew install colima
 Start colima as the engine for docker
 
 ```bash
+colima delete
 colima start
 ```
 
