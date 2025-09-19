@@ -52,7 +52,7 @@ docker run --rm -it --entrypoint bash ubuntu
 
 And found the headers in 
 
-* `/usr/include` for `lapack.`, `lapacke.h`
+* `/usr/include` for `lapack.h`, `lapacke.h`
 * `/usr/include/x86_64-linux-gnu` for `cblas.h`
 
 And libraries in
@@ -95,12 +95,17 @@ Let's first build the libraries
 We can download the source code from github's official page, we will uinstall the most recent version currently which is `0.3.30`:
 
 ```bash
-OPENBLAS_VERSION="0.3.30"
-OPENBLAS_URL="https://github.com/OpenMathLib/OpenBLAS/releases/download/v${OPENBLAS_VERSION}/OpenBLAS-${OPENBLAS_VERSION}.tar.gz"
 
 # create a directory where you will build the software
 mkdir external
 cd external
+
+# select openblas version
+OPENBLAS_VERSION="0.3.30"
+OPENBLAS_URL="https://github.com/OpenMathLib/OpenBLAS/releases/download/v${OPENBLAS_VERSION}/OpenBLAS-${OPENBLAS_VERSION}.tar.gz"
+
+# install dir, change this to wherever you want
+INSTALL_DIR=${HOME}/libs
 
 # download
 wget ${OPENBLAS_URL}
@@ -113,12 +118,28 @@ cd OpenBLAS-${OPENBLAS_VERSION}
 
 # compile the library
 mkdir -p build && cd build
-cmake -DCMAKE_INSTALL_PREFIX=../../openblas \
+cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_DIR} \
       -DCMAKE_BUILD_TYPE=Release \
       -DBUILD_SHARED_LIBS=ON \
       ..
 
 make -j 64
 make install
-cd ../..
+cd ../../..
 ```
+
+Now, you will find the includes and libs the installation dir. Just ls the directories
+
+```bash
+ls $INSTALL_DIR/include/openblas
+```
+
+where you will find `cblas.h`, `lapack.h`, `lapacke.h`.
+
+Also the libraries
+
+```bash
+ls $INSTALL_DIR/lib
+```
+
+to find `libopenblas.dylib` (in MacOS)
