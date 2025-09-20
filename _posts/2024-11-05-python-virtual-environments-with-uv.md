@@ -20,10 +20,12 @@ General steps for creating a virtual environment
 # install exec as
 curl -LsSf https://astral.sh/uv/install.sh | sh -s -- --verbose
 
-# install a python version and create virtual environment
-uv python install 3.13
-uv python pin 3.13
-uv venv .venv
+# install a python version and create virtual environment named general in ~/.venvs
+uv python install 3.12
+uv venv ~/.venvs/general --python 3.12
+
+# activate environment
+source ~/.venvs/general/bin/activate
 
 # install some packages
 uv pip install numpy pandas
@@ -31,8 +33,11 @@ uv pip install numpy pandas
 # see the list of packages and versions
 uv pip list
 
-# install from pyproject.com
+#  # install from pyproject.com
+# create env in current directory
 uv venv .venv
+
+# sync packages
 uv sync
 ```
 
