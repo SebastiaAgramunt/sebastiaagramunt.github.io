@@ -43,6 +43,7 @@ order: 2
 
 - <a href="../posts/cuda-utils">CUDA Utils</a>
 - <a href="../posts/audio-transcription">Audio Transcription using Whisper from OpenAI</a>
+- <a href="../posts/cuda-performance">Nvidia GPU performance</a>
 
 ## Algorithms and Data Structures
 
