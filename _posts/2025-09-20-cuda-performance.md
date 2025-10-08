@@ -16,7 +16,7 @@ I thank [Lambda AI](https://lambda.ai/) for providing free credit to run the exp
 
 ## The problem
 
-Given two arrays of `float`s of length `N`, their sum `m`  times. This is, for each element `a` in `\textbf{a}` and each element `b` of vector `\textbf{b}` we make the sum `m` times. A total of `N \times m` floating point sums. We can write the CPU code in C++ as
+Given two arrays of `float`s of length `N`, their sum `m`  times. This is, for each element `a` in $\vec{a}$ and each element `b` of vector $\vec{b}$ we make the sum `m` times. A total of $N \times m$ floating point sums. We can write the CPU code in C++ as
 
 ```cpp
 // Create host a, b, c
@@ -32,7 +32,7 @@ for (int i = 0; i < N; ++i) {
 for (int i = 0; i < N; ++i) {
     double acc = 0;
     double s = h_a[i] + h_b[i];
-    for (int j = 0; j < m; ++j) {
+    for (int j = 0; j < m-1; ++j) {
         acc = acc + s;
     }
     h_c_cpu[i] = acc;
@@ -49,7 +49,7 @@ So that it would be only `N` additions?. We want to explicitely make the sum `m`
 
 ## GPU Characteristics
 
-As mentioned above, we will be using `gpu_1x_a100_sxm4` from [Lambda AI](https://lambda.ai/). Running `gpu_info` command line tool described in another post...
+As mentioned above, we will be using `gpu_1x_a100_sxm4` from [Lambda AI](https://lambda.ai/). Running `gpu_info` command line tool described in another post.
 
 
 ## GPU kernel for vector addition
@@ -65,7 +65,7 @@ __global__ void vectorAdd(const T* a, const T* b, T* c, int n, int m=1) {
     if (idx >= n) return;
         T s = a[idx] + b[idx];
         T acc = T(0);
-        for (int j = 0; j < m; ++j) {
+        for (int j = 0; j < m-1; ++j) {
             acc = acc + s;
         }
         c[idx] = acc;
