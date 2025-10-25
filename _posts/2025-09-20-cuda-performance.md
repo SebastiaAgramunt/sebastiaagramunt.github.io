@@ -12,7 +12,7 @@ math: true
 
 GPUs or Graphical Processing Units have become essential in high performance computing these days. They are efficient hardware that can parallelize small calculations. For instance, in Machine Learning (ML) and Artificial Intelligence (AI), GPUs are ubiquitous, as almost all operations are matrix multiplications, convolutions, max pooling... Operations that can be paralellized easily. However, GPUs are not suitable for any kind of calculation, in this post we will understand when it pays off to bring the calculation to GPU for a very simple example.
 
-I thank [Lambda AI](https://lambda.ai/) for providing free credit to run the experiments described in the post. Throughout this post we will be using `gpu_1x_a100_sxm4`, an Ampere 100 GPU, the same as used in the post <a href="../cuda-utils">CUDA Utils</a>. As always the code can be found in my [github repository]([Code](https://github.com/SebastiaAgramunt/blogging-code/tree/main/cuda-performance)).
+I thank [Lambda AI](https://lambda.ai/) for providing free credit to run the experiments described in the post. Throughout this post we will be using `gpu_1x_a100_sxm4`, an Ampere 100 GPU, the same as used in the post <a href="../cuda-utils">CUDA Utils</a>. As always the code can be found in my [github repository](https://github.com/SebastiaAgramunt/blogging-code/tree/main/cuda-performance).
 
 ## The problem
 
@@ -99,7 +99,7 @@ Here I specify how many `ThreadsPerBlock` to use and therefore infer the blocks 
 
 ## CPU vs GPU in vector addition
 
-With all this and the code in the [github repository]([Code](https://github.com/SebastiaAgramunt/blogging-code/tree/main/cuda-performance)) we can start calculating vector additions in the GPU and compare them to the CPU. First let's calculate how much time does it take to calculate the addition of two vectors as a function of ttheir size $N$.
+With all this and the code in the [github repository](https://github.com/SebastiaAgramunt/blogging-code/tree/main/cuda-performance) we can start calculating vector additions in the GPU and compare them to the CPU. First let's calculate how much time does it take to calculate the addition of two vectors as a function of ttheir size $N$.
 
 <figure style="text-align: center;">
   <img src="/assets/img/posts/2025-09-20-cuda-performance/gpu_cpu_performance_1.png" alt="" width="700">
