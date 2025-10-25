@@ -12,7 +12,7 @@ math: true
 
 Recently I found myself with the need to transcribe an entire [YouTube interview](https://www.youtube.com/watch?v=3GL64FIqgtg&t=912s). The prupose of this post is to use AI to transcribe the audio to text and then translate from Spanish to English.
 
-The interview was hosted by people from [Opground.com](https://opground.com/). In this post I should acknoledge [Eduard Teixidó](https://www.linkedin.com/in/eduardteixidoviladrich/) and [Marcel Gonzalbo](https://www.linkedin.com/in/marcelgozalbobaro/) from Opground for the interview. Also I thank [Lambda AI](https://lambda.ai/) for providing free credit to run the inference in the AI models described in the post.
+The interview was hosted by people from [Opground.com](https://opground.com/). In this post I should acknoledge [Eduard Teixidó](https://www.linkedin.com/in/eduardteixidoviladrich/) and [Marcel Gozalbo](https://www.linkedin.com/in/marcelgozalbobaro/) from Opground for the interview. Also I thank [Lambda AI](https://lambda.ai/) for providing free credit to run the inference in the AI models described in the post.
 
 
 ## Introduction
