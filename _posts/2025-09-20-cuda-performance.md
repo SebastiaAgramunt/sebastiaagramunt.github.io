@@ -142,12 +142,16 @@ Let's compare the explicit times for 2048 additions at a small and large vector 
 
 <div style="display: flex; justify-content: center; gap: 20px;">
   <figure style="text-align: center;">
-    <img src="/assets/img/posts/2025-09-20-cuda-performance/percentages_performance_N_512additions_2048.png" width="350" />
+    <img src="/assets/img/posts/2025-09-20-cuda-performance/percentages_performance_N_512additions_2048.png"
+         width="350"
+         alt="Percentage of GPU time spent in each operation for N=10^2 with 2048 additions" />
     <figcaption><strong>Fig. 4.</strong> Percentage of time spent in calculation for $log_{10}N$=2 and 2048 additions per vector element. Notice total time is very small and percentage of free and allocation time is significant in percentage.</figcaption>
   </figure>
 
   <figure style="text-align: center;">
-    <img src="/assets/img/posts/2025-09-20-cuda-performance/percentages_performance_N_1073741824additions_2048.png" width="350" />
+    <img src="/assets/img/posts/2025-09-20-cuda-performance/percentages_performance_N_1073741824additions_2048.png"
+         width="350"
+         alt="Percentage of GPU time spent in each operation for N=10^9 with 2048 additions" />
     <figcaption><strong>Fig. 5.</strong> Percentage of time spent in calculation for $log_{10}N$=9 and 2048 additions per vector element. The compute time percentage has increased, not all threads are launched at the same time.</figcaption>
   </figure>
 </div>
