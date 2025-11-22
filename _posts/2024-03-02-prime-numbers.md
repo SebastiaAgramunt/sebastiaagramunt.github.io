@@ -102,7 +102,6 @@ for $c$ in $1$, $2$, $4$, $\cdots$, $2^k$. You can find the proof of this propos
 
 Ok, but how many random $a$’s should one test to give a certainty of say 99% that the number $p$ is probably prime?. There’s another proposition that assesses that. Let $n$ be an odd composite number, then at least 75% of the numbers between $1$ and $n-1$ are Miller-Rabin witnesses for $n$. This means that if we randomly sample $10$ distinct values of a in the range of $1$ to $n-1$, the probability of hitting at least $1$ witness is $1- P(k=1, n=10)$=$0.99997$ (where $P$ is the Bernoulli probability). We are therefore quite sure that if with $10$ trials we haven’t found a witness the number is prime but we will never be 100% sure.
 
-My implementation in code of the Miller-Rabin algorithm can be found here. Also the code to generate random prime numbers. Checking the calculation time with a regular laptop (2.6GHz 6 core 16 GB RAM) I get in between $25ms$ to $60ms$ to generate a $256$ bit random prime, in between $80$ and $120ms$ for $512$ bit prime and between $500ms$ to $2.15s$ for $1024$ bit prime. All this checking for $40$ maximum values of potential witnesses $a$.
 
 # Conclusions
 Prime numbers are the building blocks of arithmetics and are very useful in cryptography. We’ve seen how prime numbers distribute in density, how to efficiently find them and how to test if a number is prime or composite using the Miller-Rabin primality testing.

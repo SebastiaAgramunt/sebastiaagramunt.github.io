@@ -9,6 +9,7 @@ order: 2
 - <a href="../posts/prime-numbers">Prime Numbers</a>
 - <a href="../posts/number-theory">Number Theory</a>
 - <a href="../posts/introduction-to-secure-communication">Introduction to Secure Communication</a>
+- <a href="../posts/miller-rabin-primality-test"> Miller-Rabin Primality Test</a>
 
 ## Python
 
