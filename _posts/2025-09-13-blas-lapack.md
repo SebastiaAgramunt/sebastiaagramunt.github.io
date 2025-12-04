@@ -312,7 +312,7 @@ g++ -O3 \
     -o ${ROOT_DIR}/build/obj/cblas_example.o
 
 # compile binary
-g++ -O3 \33vwcnbZ1
+g++ -O3 \
     ${ROOT_DIR}/build/obj/cblas_example.o \
     -L${OPENBLAS_LIB} \
     -lopenblas \
