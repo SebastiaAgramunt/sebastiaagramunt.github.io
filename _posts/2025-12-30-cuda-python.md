@@ -20,7 +20,7 @@ CUDA is not the simplest framework to learn, first you need to know C++ and then
 
 All these libraries are super promissing, specially cuTile (I will write some posts about these libraries soon!). However sometimes one needs to have full control of the CUDA code and write directly the CUDA kernels. In my current position at Eikon Therapeutics I coded algorithms for detection and localization of proteins in images using CUDA kernels and reduced the calculation time from 3 minutes (CPU) to 5 seconds (GPU). Apart from the technical difficulty of coding the kernels and handling memory, one difficult part was to expose this functionality to a regular user that codes in Python. For that I learned how to compile the CUDA code with `nvcc` and create the bindings for Python. Also how to package this on a wheel for specific architecture and run the tests in an automated pipeline.
 
-In this post we will learn how to expose CUDA functionality in Python so effectively calling your custom CUDA code from Python without much hassle. The code for this project can be found in my [python-cuda](https://github.com/SebastiaAgramunt/python-cuda) GitHub repository.
+In this post we will learn how to expose CUDA functionality in Python so effectively calling your custom CUDA code from Python without much hassle. The code for this project can be found in my [python-cuda](https://github.com/SebastiaAgramunt/python-cuda) GitHub repository not in [blogging-code](https://github.com/SebastiaAgramunt/blogging-code) where I usually publish the code for this blog.
 
 ## The structure
 

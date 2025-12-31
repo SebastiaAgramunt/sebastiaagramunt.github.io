@@ -39,7 +39,7 @@ order: 2
 - <a href="../posts/cpp-make">Make and Makefiles</a>
 - <a href="../posts/cpp-python-extension">C++ basic Python extension</a>
 - <a href="../posts/blas-lapack">BLAS and LAPACK for Linear Algebra</a>
-<!-- - <a href="../posts/cpp-python-boilerplate">Python package with C++ extension boilerplate </a> -->
+- <a href="../posts/cpp-python-boilerplate">Python package with C++ extension boilerplate </a>
 
 ## CUDA
 
