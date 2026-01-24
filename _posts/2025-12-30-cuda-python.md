@@ -10,7 +10,6 @@ render_with_liquid: false
 math: true
 ---
 
-## TLDR
 
 In this post we will learn how to expose CUDA functionality in Python so effectively calling your custom CUDA code from Python without much hassle.
 
