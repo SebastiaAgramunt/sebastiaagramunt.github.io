@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 540" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2937"/>
+    </marker>
+  </defs>
+
+  <!-- Region shading -->
+  <!-- Memory-bound: triangle under the diagonal, left of the ridge point -->
+  <path d="M 120 430 L 500 90 L 500 430 Z" fill="#3b82f6" fill-opacity="0.10"/>
+  <!-- Compute-bound: rectangle under the flat roof, right of the ridge point -->
+  <path d="M 500 90 L 760 90 L 760 430 L 500 430 Z" fill="#f59e0b" fill-opacity="0.10"/>
+
+  <!-- Title -->
+  <text x="410" y="38" text-anchor="middle" font-size="22" font-weight="600" fill="#111827">The Roofline Model</text>
+  <text x="410" y="60" text-anchor="middle" font-size="14" fill="#6b7280">attainable performance vs. arithmetic intensity</text>
+
+  <!-- Axes -->
+  <line x1="120" y1="430" x2="775" y2="430" stroke="#1f2937" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="120" y1="430" x2="120" y2="75" stroke="#1f2937" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- Decade tick marks (illustrative, no numbers) -->
+  <g stroke="#9ca3af" stroke-width="1">
+    <line x1="250" y1="430" x2="250" y2="435"/>
+    <line x1="370" y1="430" x2="370" y2="435"/>
+    <line x1="500" y1="430" x2="500" y2="435"/>
+    <line x1="630" y1="430" x2="630" y2="435"/>
+
+    <line x1="120" y1="345" x2="115" y2="345"/>
+    <line x1="120" y1="260" x2="115" y2="260"/>
+    <line x1="120" y1="175" x2="115" y2="175"/>
+    <line x1="120" y1="90"  x2="115" y2="90"/>
+  </g>
+
+  <!-- Bandwidth roof (diagonal) -->
+  <line x1="120" y1="430" x2="500" y2="90" stroke="#2563eb" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Compute roof (horizontal) -->
+  <line x1="500" y1="90" x2="760" y2="90" stroke="#dc2626" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Ridge-point guides -->
+  <line x1="500" y1="90" x2="500" y2="430" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <line x1="500" y1="90" x2="120" y2="90" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="5 4"/>
+
+  <!-- Ridge-point marker -->
+  <circle cx="500" cy="90" r="6" fill="#111827"/>
+
+  <!-- P_peak label on y-axis -->
+  <text x="113" y="94" text-anchor="end" font-size="15" fill="#b91c1c" font-weight="600">P_peak</text>
+
+  <!-- I* label on x-axis -->
+  <text x="500" y="453" text-anchor="middle" font-size="15" fill="#1f2937" font-weight="600">I*</text>
+  <text x="500" y="473" text-anchor="middle" font-size="13" fill="#6b7280">ridge point: I* = P_peak / β</text>
+
+  <!-- Axis titles -->
+  <text x="447" y="510" text-anchor="middle" font-size="16" fill="#1f2937">Arithmetic Intensity   I   [FLOP / byte]</text>
+  <text x="38" y="252" text-anchor="middle" font-size="16" fill="#1f2937" transform="rotate(-90, 38, 252)">Performance   P   [FLOP / s]</text>
+
+  <!-- Roof labels with leader lines -->
+  <!-- Bandwidth roof leader -->
+  <line x1="260" y1="200" x2="290" y2="290" stroke="#9ca3af" stroke-width="1"/>
+  <text x="205" y="192" font-size="14" fill="#1e40af" font-weight="600">bandwidth roof</text>
+  <text x="205" y="210" font-size="13" fill="#1e40af">P = β · I  (slope = 1 in log–log)</text>
+
+  <!-- Compute roof leader -->
+  <line x1="640" y1="68" x2="640" y2="86" stroke="#9ca3af" stroke-width="1"/>
+  <text x="640" y="55" text-anchor="middle" font-size="14" fill="#b91c1c" font-weight="600">compute roof</text>
+  <text x="640" y="38" text-anchor="middle" font-size="13" fill="#b91c1c">P = P_peak</text>
+
+  <!-- Region labels -->
+  <text x="298" y="375" text-anchor="middle" font-size="14" fill="#1e40af" font-weight="600">memory-bound</text>
+  <text x="298" y="394" text-anchor="middle" font-size="12" fill="#1e40af" font-style="italic">starved for bytes</text>
+
+  <text x="630" y="375" text-anchor="middle" font-size="14" fill="#b45309" font-weight="600">compute-bound</text>
+  <text x="630" y="394" text-anchor="middle" font-size="12" fill="#b45309" font-style="italic">starved for FLOPs</text>
+</svg>
