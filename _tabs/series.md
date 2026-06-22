@@ -48,6 +48,7 @@ order: 2
 - <a href="../posts/cuda-performance">Nvidia GPU performance</a>
 - <a href="../posts/cuda-matrix-multiplication">CUDA Matrix Multiplication</a>
 - <a href="../posts/cuda-python">CUDA Python package</a>
+- <a href="../posts/cuda-mma">CUDA MMA and the roofline model</a>
 
 ## Algorithms and Data Structures
 
