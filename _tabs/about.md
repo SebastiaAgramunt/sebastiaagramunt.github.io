@@ -167,7 +167,7 @@ Over the years I've been keeping notes about topics I like to learn and have bee
 
 # <i class="fa-solid fa-file-lines"></i> Resume
 
-<a href="../files/2026.08.12_Sebastia_Agramunt_Puig_Resume.pdf" download class="btn btn-outline-primary btn-sm resume-download"><i class="fa-solid fa-file-arrow-down"></i> Download Resume (PDF)</a>
+<a href="../files/2026.08.16_Sebastia_Agramunt_Puig_Resume.pdf" download class="btn btn-outline-primary btn-sm resume-download"><i class="fa-solid fa-file-arrow-down"></i> Download Resume (PDF)</a>
 
 ## Experience
 
